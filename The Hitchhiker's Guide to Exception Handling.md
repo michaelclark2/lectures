@@ -2,7 +2,7 @@
 
 It's a wacky world out there, and there's a lot in it that can go wrong.  Take comfort in this fact.  You can be the most intelligent being in the universe, but you will still write some breaking code.  But knowing what goes wrong will guide you to making everything right again.
 
-There is no one-size-fits-all for handling an error in your code.  If there were, then nothing would ever be broken and frankly, that's no fun at all.  There is, however, a mindset you can adopt to make this your life just a little bit more sane, in a relative sense of the word.  Provided here is a loose-knit guide to finding your way around any exception thrown your way.  
+There is no one-size-fits-all for handling an error in your code.  If there were, then nothing would ever be broken and frankly, that's no fun at all.  There is, however, a mindset you can adopt to make your life just a little bit more sane, in a relative sense of the word.  Provided here is a loose-knit guide to finding your way around any exception thrown your way.  
 
 Always knowing where one's towel is will get you far.
 
@@ -56,7 +56,7 @@ JavaScript does an excellent job at telling you about your errors.  Included wit
 
 Here is an example of an error stack from a project using several libraries:
 
-![An error stack](C:\Users\Michael\Pictures\error stack.PNG)
+![An error stack](/imgs/error stack.png)
 
 So when you click on each of these lines, it will actually take you directly to the line it is referencing in the sources tab.  The only problem with this is that almost none of the lines in this stack trace are code that is written by me, they are all from the libraries I am using in the project.  
 
