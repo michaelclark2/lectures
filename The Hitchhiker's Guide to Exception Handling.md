@@ -56,7 +56,7 @@ JavaScript does an excellent job at telling you about your errors.  Included wit
 
 Here is an example of an error stack from a project using several libraries:
 
-![error stack](https://raw.githubusercontent.com/michaelclark2/lectures/master/imgs/error stack.PNG)
+![error stack](https://raw.githubusercontent.com/michaelclark2/lectures/master/imgs/errorstack.PNG)
 
 So when you click on each of these lines, it will actually take you directly to the line it is referencing in the sources tab.  The only problem with this is that almost none of the lines in this stack trace are code that is written by me, they are all from the libraries I am using in the project.  
 
