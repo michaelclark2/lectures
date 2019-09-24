@@ -44,7 +44,7 @@ Let's break it down:
 
 These questions will lead you to the actual source of the error, but the original error message was the starting signpost to lead you down these paths.
 
-## Google it
+## Just Google it
 
 The internet is big.  Really big.  You just won't believe how vastly, hugely, mind-bogglingly big it is.  Chances are pretty high that you're not the first developer to encounter a bug.  If you have run into a roadblock debugging on your own, you can usually get a few hits on Google by copying and pasting the error messaging into the search bar.
 
@@ -52,13 +52,13 @@ If you can't get good results, try to put some keywords about what you were tryi
 
 ## Follow the stack
 
-JavaScript does an excellent job at telling you about your errors.  Included with most errors is what is called the 'stack trace' which is literally a list of how JavaScript ran your code, in the order the functions were called, and it will end on where the exception was thrown.  The stack trace will also spit out links to the lines that the functions were called on.  This is extremely helpful when you have modular code or using an external library.
+JavaScript does an excellent job at telling you about your errors.  Included with most errors is what is called the 'stack trace' which is literally a list of how JavaScript ran your code, in the order the functions were called, and it will end on where the exception was thrown.  The stack trace will also spit out line numbers that the functions were called on.  This is extremely helpful when you have modular code or using an external library.
 
 Here is an example of an error stack from a project using several libraries:
 
 ![error stack](https://raw.githubusercontent.com/michaelclark2/lectures/master/imgs/errorstack.png)
 
-So when you click on each of these lines, it will actually take you directly to the line it is referencing in the sources tab.  The only problem with this is that almost none of the lines in this stack trace are code that is written by me, they are all from the libraries I am using in the project.  However, there is one line in here that is written by me, and is a point in this stack trace where I can look to see if maybe I messed up somewhere.  The line in question is the third item in the above stack trace `at Module../src/main.js (main.js: 5)`
+Each of the lines listed here are the line numbers that the code followed to reach the exception, much as a breadcrumb trail leads directly to the witch's hut.  You can usually follow this trail right to the source of the error, and you know that something definitely went wrong along the way.  So if you follow the stack trace you will eventually find something that looks off.  The only problem with this particular example is that almost none of the lines in this stack trace are code that is written by me, they are all from the libraries I am using in the project.  However, there is one line in here that is written by me, and is a point in this stack trace where I can look to see if maybe I messed up somewhere.  The line in question is the fourth item in the above stack trace `at Module../src/main.js (main.js: 5)`
 
 Clicking on this line will take me directly to line 5 of my main.js file:
 
@@ -73,11 +73,11 @@ So we now know that somewhere on line 5, there is a mistake.  Looking closely at
 Of these three options, I'm going to start with the one that takes the least effort to check.  I can easily determine whether or not there is an element on the DOM with the id of `App` by simply looking at the Elements pane:
 ![the element tab](https://raw.githubusercontent.com/michaelclark2/lectures/master/imgs/error_index.PNG)
 
-And look at that, turns out there I simply capitalized the word `app` in the id, so I'll just try and fix it by putting the lowercase 'app' on line 5 in my main.js
+And look at that, turns out I simply capitalized the word `app` in the id, so I'll just try and fix it by putting the lowercase 'app' on line 5 in my main.js
 
 ## Breakpoints and the Debugger
 
-How to set breakpoints, and crawl through the code
+Dealing with bugs found in loops can be a bothersome chore, but luckily for you, there is a tool to help with this issue.  
 
 ## Paying it forward
 
