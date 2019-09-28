@@ -3,8 +3,9 @@ import paintbrush from '../javascripts/components/paintbrush';
 import '../styles/main.scss';
 
 const init = () => {
-  grid.makeGrid(25,25);
-  paintbrush.attachEvent();
+  grid.makeGrid(25, 25);
+  paintbrush.attachEvents();
+  paintbrush.printColorPicker();
 }
 
 init();
