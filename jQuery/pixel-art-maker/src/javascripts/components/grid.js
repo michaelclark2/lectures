@@ -2,9 +2,9 @@ import utils from '../helpers/utils';
 
 const makeGrid = (rows = 1, columns = 1) => {
   let domString = '<table>';
-  for (let c = 0; c < columns; c++) {
+  for (let r = 0; r < rows; r++) {
     domString += '<tr>';
-    for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < columns; c++) {
       domString += '<td></td>';
     }
     domString += '</tr>';
