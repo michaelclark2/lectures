@@ -1,16 +1,16 @@
 import utils from "../helpers/utils";
 
-const paintColor = ['blue', 'red', 'green', 'orange', 'black', 'chartreuse'];
+const paintColors = ['blue', 'red', 'green', 'orange', 'black', 'chartreuse'];
 
 const paintPixel = (e) => {
-  const pixel = e.target;
+  const pixel = $(e.target);
   const fillColor = $('.color-choice:checked').val();
-  pixel.style.backgroundColor = fillColor;
+  pixel.css('backgroundColor', fillColor);
 }
 
 const printColorPicker = () => {
   let domString = '';
-  paintColor.forEach(color => {
+  paintColors.forEach(color => {
     domString += `
     <div class="form-check form-check-inline">
       <input class="color-choice" type="radio" name="colorPicker" id="${color}Choice" value="${color}">
@@ -23,7 +23,7 @@ const printColorPicker = () => {
 }
 
 const attachEvents = () => {
-  $(document.body).on('mousedown', 'td', paintPixel);
+  $(document).on('click', 'td', paintPixel);
 }
 
 export default {attachEvents, printColorPicker}
